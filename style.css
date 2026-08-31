@@ -1,0 +1,1320 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    color: white;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 80, 160, .25),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(130, 70, 255, .25),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #120014,
+            #35042f,
+            #12001c
+        );
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+
+    min-height: 100vh;
+
+    padding: 30px 20px 70px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+
+    justify-content: center;
+
+}
+
+
+.home-content {
+
+    max-width: 900px;
+
+}
+
+
+.small-title {
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    color: #ffc3dc;
+
+    animation: fadeDown 1.5s ease;
+
+}
+
+
+.home h1 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(
+        60px,
+        12vw,
+        140px
+    );
+
+    line-height: .8;
+
+    margin: 30px 0 15px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #fff,
+            #ff94c6,
+            #fff,
+            #d3a9ff,
+            #fff
+        );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    animation:
+        gradient 5s linear infinite,
+        zoomIn 1.2s ease;
+
+}
+
+
+.home h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(
+        40px,
+        8vw,
+        80px
+    );
+
+    color: #ff9ec8;
+
+    text-shadow:
+        0 0 15px #ff4d9b,
+        0 0 40px rgba(255, 77, 155, .5);
+
+    animation: heartbeat 2s infinite;
+
+}
+
+
+.intro {
+
+    margin: 30px auto;
+
+    line-height: 2;
+
+    color: #f5dce9;
+
+}
+
+
+.heart-big {
+
+    font-size: 100px;
+
+    margin: 25px;
+
+    animation: heartbeat 1.8s infinite;
+
+    filter:
+        drop-shadow(
+            0 0 25px #ff4d9b
+        );
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.magic-btn {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-width: 210px;
+
+    padding: 16px 28px;
+
+    margin-top: 30px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-weight: 600;
+
+    border: 1px solid
+        rgba(255,255,255,.25);
+
+    background:
+        linear-gradient(
+            100deg,
+            #ff3f91,
+            #9b5cff,
+            #ff3f91
+        );
+
+    background-size: 200%;
+
+    box-shadow:
+        0 10px 30px
+        rgba(255,50,140,.35);
+
+    overflow: hidden;
+
+    transition:
+        transform .3s,
+        box-shadow .3s;
+
+    animation:
+        buttonFloat 3s infinite,
+        buttonGradient 4s linear infinite;
+
+}
+
+
+.magic-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 70%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(255,255,255,.7),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    animation: shine 2.5s infinite;
+
+}
+
+
+.magic-btn:hover {
+
+    transform:
+        translateY(-6px)
+        scale(1.05);
+
+    box-shadow:
+        0 15px 50px
+        rgba(255,60,150,.6);
+
+}
+
+
+.magic-btn:active {
+
+    transform: scale(.9);
+
+}
+
+
+/* =========================
+   PAGE TITLES
+========================= */
+
+.page-title {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(
+            45px,
+            9vw,
+            85px
+        );
+
+    color: #ff9ec8;
+
+    margin-top: 30px;
+
+    text-shadow:
+        0 0 20px
+        rgba(255,100,170,.4);
+
+    animation:
+        zoomIn 1s ease;
+
+}
+
+
+.page-subtitle {
+
+    color: #e9cddd;
+
+    margin: 10px 0 35px;
+
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake-container {
+
+    margin-top: 40px;
+
+}
+
+
+.cake {
+
+    width: 300px;
+
+    height: 250px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    transition:
+        transform .3s;
+
+}
+
+
+.cake:hover {
+
+    transform:
+        translateY(-8px);
+
+}
+
+
+.cake-left,
+.cake-right {
+
+    position: absolute;
+
+    bottom: 40px;
+
+    width: 50%;
+
+    height: 120px;
+
+    background:
+        linear-gradient(
+            #ff9ac8,
+            #e9438c
+        );
+
+    border: 3px solid
+        rgba(255,255,255,.2);
+
+    box-shadow:
+        inset 0 10px 15px
+        rgba(255,255,255,.2),
+        0 15px 30px
+        rgba(0,0,0,.3);
+
+    transition:
+        transform 1.2s
+        cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.cake-left {
+
+    left: 0;
+
+    border-radius:
+        20px 0 0 20px;
+
+}
+
+
+.cake-right {
+
+    right: 0;
+
+    border-radius:
+        0 20px 20px 0;
+
+}
+
+
+.cake-top {
+
+    position: absolute;
+
+    top: 65px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 50px;
+
+    background: #fff1f8;
+
+    border-radius: 50%;
+
+    z-index: 5;
+
+}
+
+
+.cream {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 110px;
+
+    height: 25px;
+
+    background: #fff5fa;
+
+    z-index: 6;
+
+    border-radius: 50%;
+
+}
+
+
+.candle {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    transform:
+        translateX(-50%);
+
+    width: 22px;
+
+    height: 75px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            white 0 10px,
+            #ff62a7 10px 20px
+        );
+
+    border-radius: 7px;
+
+    z-index: 10;
+
+}
+
+
+.flame {
+
+    position: absolute;
+
+    width: 25px;
+
+    height: 35px;
+
+    top: -38px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    background: #ffd166;
+
+    border-radius:
+        50% 50% 50% 50%;
+
+    box-shadow:
+        0 0 20px #ffb703,
+        0 0 50px #ffb703;
+
+    animation:
+        flame .5s infinite alternate;
+
+}
+
+
+/* CAKE CUT */
+
+.cake.cut .cake-left {
+
+    transform:
+        translateX(-100px)
+        rotate(-8deg);
+
+}
+
+
+.cake.cut .cake-right {
+
+    transform:
+        translateX(100px)
+        rotate(8deg);
+
+}
+
+
+/* =========================
+   CAKE MESSAGE
+========================= */
+
+.message-box {
+
+    max-width: 700px;
+
+    padding: 35px 25px;
+
+    margin-top: 40px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    backdrop-filter:
+        blur(15px);
+
+    box-shadow:
+        0 20px 70px
+        rgba(0,0,0,.35);
+
+    opacity: 0;
+
+    transform:
+        translateY(30px)
+        scale(.9);
+
+    pointer-events: none;
+
+    transition:
+        1s ease;
+
+}
+
+
+.message-box.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    pointer-events: auto;
+
+}
+
+
+.message-box h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 60px;
+
+    color: #ff8fbe;
+
+}
+
+
+.message-box h3 {
+
+    margin: 10px;
+
+}
+
+
+.message-box p {
+
+    line-height: 1.9;
+
+    color: #ffeaf3;
+
+}
+
+
+/* =========================
+   MEMORIES
+========================= */
+
+.gallery {
+
+    width: min(1100px, 100%);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(12, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.memory-card {
+
+    position: relative;
+
+    grid-column:
+        span 4;
+
+    height: 360px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.35);
+
+    opacity: 0;
+
+    transform:
+        translateY(50px);
+
+    transition:
+        opacity .8s,
+        transform .8s,
+        box-shadow .3s;
+
+}
+
+
+.memory-card.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.memory-card:hover {
+
+    box-shadow:
+        0 20px 60px
+        rgba(255,80,160,.35);
+
+}
+
+
+.memory-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .8s;
+
+}
+
+
+.memory-card:hover img {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.memory-card span {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+    padding: 25px 15px 18px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.8)
+        );
+
+}
+
+
+/* =========================
+   MEMORY MESSAGE
+========================= */
+
+.memory-message {
+
+    max-width: 800px;
+
+    margin: 45px auto 0;
+
+    padding: 30px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    backdrop-filter:
+        blur(12px);
+
+}
+
+
+.memory-message h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 50px;
+
+    color: #ff9ec8;
+
+    margin-bottom: 15px;
+
+}
+
+
+.memory-message p {
+
+    line-height: 1.9;
+
+    color: #f6dce9;
+
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-page {
+
+    justify-content:
+        flex-start;
+
+}
+
+
+.letter {
+
+    width:
+        min(800px, 100%);
+
+    margin-top: 30px;
+
+    padding:
+        45px 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7fb,
+            #ffe8f2
+        );
+
+    color: #4b2037;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 30px 90px
+        rgba(0,0,0,.5);
+
+    transform:
+        rotate(-.5deg);
+
+    position: relative;
+
+}
+
+
+.letter h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 50px;
+
+    color: #a53b6d;
+
+    margin-bottom: 25px;
+
+}
+
+
+.letter-line {
+
+    opacity: 0;
+
+    transform:
+        translateY(20px);
+
+    line-height: 1.9;
+
+    margin: 15px 0;
+
+}
+
+
+.letter-line.reveal {
+
+    animation:
+        letterReveal .8s ease
+        forwards;
+
+}
+
+
+.final-line {
+
+    font-weight: 600;
+
+    color: #8c2d58;
+
+}
+
+
+.signature {
+
+    text-align: right;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 30px;
+
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final-page {
+
+    justify-content:
+        center;
+
+}
+
+
+.final-content {
+
+    max-width: 800px;
+
+}
+
+
+.final-heart {
+
+    font-size: 100px;
+
+    animation:
+        heartbeat 1.5s infinite;
+
+}
+
+
+.final-page h1 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(
+            60px,
+            12vw,
+            120px
+        );
+
+    background:
+        linear-gradient(
+            90deg,
+            white,
+            #ff8fbd,
+            white
+        );
+
+    background-size: 200%;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+    animation:
+        gradient 4s infinite linear;
+
+}
+
+
+.final-page h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 70px;
+
+    color: #ff9ac7;
+
+}
+
+
+.final-page p {
+
+    line-height: 1.9;
+
+    color: #f7dce9;
+
+}
+
+
+.big-love {
+
+    font-size: 50px;
+
+    margin: 25px;
+
+    animation:
+        heartbeat 2s infinite;
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating-heart {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+    animation:
+        floatHeart
+        linear
+        forwards;
+
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes zoomIn {
+
+    from {
+        opacity: 0;
+        transform:
+            scale(.6);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            scale(1);
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+}
+
+
+@keyframes gradient {
+
+    to {
+        background-position:
+            300% center;
+    }
+
+}
+
+
+@keyframes buttonFloat {
+
+    0%,100% {
+        margin-top: 30px;
+    }
+
+    50% {
+        margin-top: 24px;
+    }
+
+}
+
+
+@keyframes buttonGradient {
+
+    to {
+        background-position:
+            200% center;
+    }
+
+}
+
+
+@keyframes shine {
+
+    0% {
+        left: -120%;
+    }
+
+    50%,100% {
+        left: 150%;
+    }
+
+}
+
+
+@keyframes flame {
+
+    from {
+        transform:
+            translateX(-50%)
+            scale(.8)
+            rotate(-4deg);
+    }
+
+    to {
+        transform:
+            translateX(-50%)
+            scale(1.1)
+            rotate(4deg);
+    }
+
+}
+
+
+@keyframes letterReveal {
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes floatHeart {
+
+    from {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    to {
+        transform:
+            translateY(-115vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 700px) {
+
+    .page {
+        padding:
+            25px 14px 60px;
+    }
+
+
+    .home h1 {
+        font-size:
+            clamp(
+                55px,
+                18vw,
+                90px
+            );
+    }
+
+
+    .home h2 {
+        font-size:
+            clamp(
+                38px,
+                12vw,
+                60px
+            );
+    }
+
+
+    .heart-big {
+        font-size: 75px;
+    }
+
+
+    .cake {
+        transform:
+            scale(.85);
+    }
+
+
+    .cake.cut .cake-left {
+
+        transform:
+            translateX(-55px)
+            rotate(-8deg);
+
+    }
+
+
+    .cake.cut .cake-right {
+
+        transform:
+            translateX(55px)
+            rotate(8deg);
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 12px;
+
+    }
+
+
+    .memory-card {
+
+        grid-column:
+            span 1;
+
+        height: 300px;
+
+    }
+
+
+    .memory-card:first-child {
+
+        grid-column:
+            span 2;
+
+    }
+
+
+    .letter {
+
+        padding:
+            35px 20px;
+
+    }
+
+
+    .letter h2 {
+
+        font-size:
+            42px;
+
+    }
+
+
+    .final-page h2 {
+
+        font-size:
+            55px;
+
+    }
+
+}
+
+
+@media(max-width: 430px) {
+
+    .gallery {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .memory-card,
+    .memory-card:first-child {
+
+        grid-column:
+            span 1;
+
+        height: 400px;
+
+    }
+
+
+    .magic-btn {
+
+        width:
+            min(330px, 94vw);
+
+    }
+
+}
